@@ -3,7 +3,7 @@ import './Table.css';
 
 function Table({valueToTable}) {
     const tableMap = valueToTable.map(user =>(
-                <tr>
+                <tr key={user.cell}>
                     <td><img src={user.picture} alt="user"/></td>
                     <td>{user.name}</td>
                     <td>{user.cell}</td>

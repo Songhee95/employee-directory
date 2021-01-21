@@ -16,7 +16,7 @@ function Home() {
                     picture: user.picture.thumbnail,
                     cell: user.cell,
                     email: user.email,
-                    dob: user.dob.date
+                    dob: user.dob.date,
                 })
             ))
             console.log(array);
