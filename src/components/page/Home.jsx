@@ -9,18 +9,17 @@ function Home() {
     useEffect(() =>{
         axios.get("https://randomuser.me/api/?results=100")
         .then(response =>{
-            const array = [];
-            response.data.results.map(user=>(
-                array.push({
-                    name: user.name.title +"." + user.name.first+" " + user.name.last,
-                    picture: user.picture.thumbnail,
-                    cell: user.cell,
-                    email: user.email,
-                    dob: user.dob.date,
-                })
-            ))
-            console.log(array);
-            setState(array)
+            const data = response.data.results;
+            setState([...data].map(data =>{
+                return{
+                    ...state,
+                    name: data.name.title+"." +data.name.first+" "+data.name.last,
+                    picture: data.picture.thumbnail,
+                    cell: data.cell,
+                    email: data.email,
+                    dob: data.dob.data
+                }
+            }))
         })
         .catch(err =>{
             setState(err);
