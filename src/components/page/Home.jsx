@@ -7,17 +7,18 @@ function Home() {
     const [state, setState] = useState([]);
 
     useEffect(() =>{
-        axios.get("https://randomuser.me/api/?results=100")
+        axios.get("https://randomuser.me/api/?results=30")
         .then(response =>{
             const data = response.data.results;
+            console.log(...data)
             setState([...data].map(data =>{
                 return{
                     ...state,
                     name: data.name.title+"." +data.name.first+" "+data.name.last,
-                    picture: data.picture.thumbnail,
+                    picture: data.picture.medium,
                     cell: data.cell,
                     email: data.email,
-                    dob: data.dob.data
+                    dob: data.dob.date
                 }
             }))
         })

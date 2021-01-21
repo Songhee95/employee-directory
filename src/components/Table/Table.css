@@ -1,0 +1,9 @@
+.table-box {
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+th,
+td {
+  padding: 0 20px;
+}
