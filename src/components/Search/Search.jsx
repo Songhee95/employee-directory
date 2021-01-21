@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Search.css'
 
-function Search() {
+function Search({user}) {
     const [option, setOption] = useState("");
     const [cellNum, setCellNum] = useState("");
     const [name, setName] = useState('')
@@ -24,7 +24,7 @@ function Search() {
 
     return (
         <div className="search-container">
-            <form className="search-form row g-3">
+            <form className="search-form row g-3" onSubmit={(e)=>{e.preventDefault(); user(name)}} >
                 <div className="col-auto input">
                     <label htmlFor="search" className="search-box">
                         <select className="form-select" aria-label="Default select example" onChange={selectOption}>

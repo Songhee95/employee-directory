@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Table from '../Table/Table';
 import Search from '../Search/Search'
 
 function Home() {
     const [state, setState] = useState([]);
+    const [userName, setUserName] = useState("");
 
     useEffect(() =>{
         axios.get("https://randomuser.me/api/?results=30")
@@ -29,7 +30,7 @@ function Home() {
 
     return (
         <div>
-            <Search/>
+            <Search user={name=> setUserName(name)} />
             <Table valueToTable={state}/>
         </div>
     )
