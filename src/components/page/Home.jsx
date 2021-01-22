@@ -18,7 +18,7 @@ function Home() {
                     picture: data.picture.medium,
                     cell: data.cell,
                     email: data.email,
-                    dob: data.dob.date
+                    dob: data.dob.date.slice(0,10)
                 }
             }))
         })
