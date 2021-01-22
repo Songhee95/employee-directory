@@ -29,10 +29,11 @@ function Home() {
     },[])
     const userSearch = (user) =>{
         if(isNaN(user)) {
-            let re = state.filter(he => he.name.toLowerCase().startsWith(user))
-            setSearch(re)
+            let reRender = state.filter(man => man.name.toLowerCase().startsWith(user))
+            setSearch(reRender)
         }else if(Number(user)){
-            console.log("this is cell search")
+            let reRender = state.filter(man => man.cell.startsWith(user))
+            setSearch(reRender)
         }else{
             setSearch("")
         }
