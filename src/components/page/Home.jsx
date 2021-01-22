@@ -30,15 +30,17 @@ function Home() {
     const userSearch = (user) =>{
         if(isNaN(user)) {
             let re = state.filter(he => he.name.toLowerCase().startsWith(user))
-            setState(re)
+            setSearch(re)
         }else if(Number(user)){
             console.log("this is cell search")
+        }else{
+            setSearch("")
         }
     }
     return (
         <div>
             <Search user={user => userSearch(user)}/>
-            <Table valueToTable={state}/>
+            <Table valueToTable={search.length===0 ? state : search}/>
         </div>
     )
 }
