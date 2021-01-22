@@ -19,7 +19,7 @@ function Table({valueToTable}) {
                     <tr>
                         <th>Picture</th>
                         <th>Name</th>
-                        <th>Cell</th>
+                        <th>Phone</th>
                         <th>Email</th>
                         <th>DOB</th>
                     </tr>

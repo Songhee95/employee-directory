@@ -32,7 +32,7 @@ function Search({user}) {
                         <select className="form-select" aria-label="Default select example" onChange={selectOption}>
                             <option defaultValue>Select Search Option</option>
                             <option value="1">Name</option>
-                            <option value="2">Cell</option>
+                            <option value="2">Phone</option>
                         </select>
                     </label>
                     <input type="text" className="form-control" id="search" name='cellNum' value={option==='1' ? name : cellNum} onChange={handleInput}/>
