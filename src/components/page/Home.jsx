@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import Table from '../Table/Table';
 import Search from '../Search/Search'
+import Header from '../Header/Header';
 
 function Home() {
     const [state, setState] = useState([]);
@@ -40,6 +41,7 @@ function Home() {
     }
     return (
         <div>
+            <Header />
             <Search user={user => userSearch(user)}/>
             <Table valueToTable={search.length===0 ? state : search}/>
         </div>
