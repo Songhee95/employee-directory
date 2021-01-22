@@ -12,19 +12,21 @@ function Search({user}) {
         if(option === "1"){
             str = str.replace(/\d+/g, "")
             setName(str)
+            user(str)
         }else if(option ==='2'){
             str = str.replace(/^[a-zA-Z]+$/, "")
             setCellNum(str)
+            user(str)
         }
     }
     const selectOption = (e) =>{
-        setOption(e.target.value)
+        setOption(e.target.value);
     }
 
 
     return (
         <div className="search-container">
-            <form className="search-form row g-3" onSubmit={(e)=>{e.preventDefault(); user(name)}} >
+            <form className="search-form row g-3" >
                 <div className="col-auto input">
                     <label htmlFor="search" className="search-box">
                         <select className="form-select" aria-label="Default select example" onChange={selectOption}>
@@ -34,9 +36,6 @@ function Search({user}) {
                         </select>
                     </label>
                     <input type="text" className="form-control" id="search" name='cellNum' value={option==='1' ? name : cellNum} onChange={handleInput}/>
-                </div>
-                <div className="col-auto search-btn">
-                    <button type="submit" className="btn btn-primary mb-3">SEARCH</button>
                 </div>
             </form>
         </div>
