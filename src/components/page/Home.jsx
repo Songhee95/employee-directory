@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import axios from 'axios';
+import API from "../API/API"
 import Table from '../Table/Table';
 import Search from '../Search/Search'
 import Header from '../Header/Header';
@@ -10,7 +10,7 @@ function Home() {
     const [search , setSearch] = useState([]);
 
     useEffect(() =>{
-        axios.get("https://randomuser.me/api/?nat=us&results=30")
+        API()
         .then(response =>{
             const data = response.data.results;
             setState([...data].map(data =>{
