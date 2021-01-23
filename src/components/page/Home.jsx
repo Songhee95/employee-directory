@@ -9,7 +9,7 @@ function Home() {
     const [search , setSearch] = useState([]);
 
     useEffect(() =>{
-        axios.get("https://randomuser.me/api/?results=30")
+        axios.get("https://randomuser.me/api/?nat=us&results=30")
         .then(response =>{
             const data = response.data.results;
             setState([...data].map(data =>{
