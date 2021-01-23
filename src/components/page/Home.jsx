@@ -3,6 +3,7 @@ import axios from 'axios';
 import Table from '../Table/Table';
 import Search from '../Search/Search'
 import Header from '../Header/Header';
+import Filter from '../Search/Filter';
 
 function Home() {
     const [state, setState] = useState([]);
@@ -28,21 +29,11 @@ function Home() {
         })
         // eslint-disable-next-line
     },[])
-    const userSearch = (user) =>{
-        if(isNaN(user)) {
-            let reRender = state.filter(man => man.name.toLowerCase().startsWith(user))
-            setSearch(reRender)
-        }else if(Number(user)){
-            let reRender = state.filter(man => man.cell.startsWith("("+user))
-            setSearch(reRender)
-        }else{
-            setSearch("")
-        }
-    }
+
     return (
         <div>
             <Header />
-            <Search user={user => userSearch(user)}/>
+            <Search user={user => Filter(user, setSearch, state)}/>
             <Table valueToTable={search.length===0 ? state : search}/>
         </div>
     )
