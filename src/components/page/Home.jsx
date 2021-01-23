@@ -33,7 +33,7 @@ function Home() {
             let reRender = state.filter(man => man.name.toLowerCase().startsWith(user))
             setSearch(reRender)
         }else if(Number(user)){
-            let reRender = state.filter(man => man.cell.startsWith(user))
+            let reRender = state.filter(man => man.cell.startsWith("("+user))
             setSearch(reRender)
         }else{
             setSearch("")
