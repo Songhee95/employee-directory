@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import './Search.css'
+import './Search.css';
+import Validation from './Validation';
 
 function Search({user}) {
     const [option, setOption] = useState("");
@@ -8,16 +9,7 @@ function Search({user}) {
 
 
     const handleInput = (e) =>{
-        let str = e.target.value;
-        if(option === "1"){
-            str = str.replace(/\d+/g, "")
-            setName(str)
-            user(str)
-        }else if(option ==='2'){
-            str = str.replace(/^[a-zA-Z]+$/, "")
-            setCellNum(str)
-            user(str)
-        }
+        Validation(e, option, setName, user, setCellNum)
     }
     const selectOption = (e) =>{
         setOption(e.target.value);
