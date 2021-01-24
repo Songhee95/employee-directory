@@ -1,55 +1,47 @@
-# Unit 19 React Homework: Employee Directory
+# Employee Directory
 
-## Overview
+View or Search non-sensitive data about other employees. User can sort table by employee name. Also It is able to search by name or phone number. Filter by name only allows letters for the search input and by Phone number only allows numbers and hyphen.
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+## Table of Contents
 
-## User Story
+- [URLs](#URLs)
+- [Usage](#usage)
+- [Questions](#questions)
+- [License](#license)
 
-- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+## URLs
 
-## Business Context
+1. Deployed URL (gh-pages):
+   ( https://songhee95.github.io/employee-directory/ )
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+2. Github Page URL:
+   [Github](https://github.com/Songhee95/employee-directory/)
 
-## Acceptance Criteria
+## Usage
 
-Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render.
+![GitHub Logo](./public/images/1.PNG)
+![GitHub Logo](./public/images/2.PNG)
+![GitHub Logo](./public/images/3.PNG)
 
-The user should be able to:
+## Questions
 
-- Sort the table by at least one category
+If you have any questions or need any help, feel free to contact me here <br>
+Github page: [Github](https://github.com/songhee95/) <br>
+Email: thdgml5537@gmail.com
 
-- Filter the users by at least one property.
+## License
 
-## Commit Early and Often
+Copyright (c) 2020 SONGHEE YIM
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-- Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-- Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-- Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-- Test your application before you commit to ensure functionality at every step in the development process
-
-- We would like you to have well over 200 commits by graduation, so commit early and often!
-
-- Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
-
-- **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
-
-## Submission on BCS
-
-You are required to submit the following:
-
-- the URL to the deployed application
-
-- the URL to the Github repository
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
